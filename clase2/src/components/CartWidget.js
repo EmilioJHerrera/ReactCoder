@@ -1,4 +1,4 @@
-//crear un icono e insertalo en el navBar
+//DESAFIO crear un icono e insertalo en el navBar
 import React from "react";
 import ReactDOM from "react-dom";
 import imagen from "../imagen/cburger.png"
