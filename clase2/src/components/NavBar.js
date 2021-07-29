@@ -2,14 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./NavBar.css";
 import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
-
+import CartWidget from "./CartWidget";
 function NavBar(){
 return(
 
 <div>
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
+  
   <Navbar.Brand id="miMarca" href="#home">HamburguerFactory</Navbar.Brand>
+  <CartWidget/>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto letraGeneral">
