@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./NavBar.css";
 import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 
-function NavBar (){
+function NavBar(){
 return(
-  
+
 <div>
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
