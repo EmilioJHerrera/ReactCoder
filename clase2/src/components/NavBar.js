@@ -1,12 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import "./NavBar.css";
 import { Navbar, Nav, NavDropdown, Container} from 'react-bootstrap'
 import CartWidget from "./CartWidget";
+import Combos from "./Combos";
+
 function NavBar(){
 return(
 
-<div>
+<>
+
 <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
   
@@ -28,7 +31,10 @@ return(
   </Navbar.Collapse>
   </Container>
 </Navbar>
-   </div>
+
+
+
+   </>
 
 
 );

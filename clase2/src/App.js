@@ -5,6 +5,8 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemCount from "./components/ItemCount";
 import Item from "./components/Item";
 import ItemList from "./components/ItemList";
+import Combos from "./components/Combos";
+import ItemDetail from "./components/ItemDetail";
 
 
 
@@ -18,8 +20,8 @@ function App(){
     return(
         <div>
 <NavBar/>
-<ItemListContainer titulo={datos.titulo}/>
-<ItemList/>
+<ItemListContainer titulo={datos.titulo}/><ItemList/>
+<ItemDetail identificador={1}/>
 </div>
     );
 }
