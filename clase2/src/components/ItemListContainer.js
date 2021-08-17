@@ -5,7 +5,6 @@
 
 
 import React from "react";
-import ReactDOM from "react-dom";
 import {Container, Row, Col} from "react-bootstrap";
 import Imagen from "../imagen/hero.png"
 import "../components/ItemListContainer.css"

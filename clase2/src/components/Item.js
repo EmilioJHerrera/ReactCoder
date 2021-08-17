@@ -2,8 +2,19 @@ import React from "react";
 import {Card,Button} from "react-bootstrap";
 import ItemCount from "./ItemCount";
 
+import { useParams, useHistory } from "react-router-dom";
+
 
 function Item({id,titulo, descripcion, precio,url}){
+
+  // let {params} = useParams();
+  const history = useHistory();
+  const handleNavigation = (id) => {
+    history.push(`/Item/${id}`);
+  };
+
+
+
 
 
 return(
@@ -20,8 +31,12 @@ return(
     <Card.Text>{precio}</Card.Text>
     
     {/* luego se puede modificar los valores de maximos y minimos para cada producto */}
-
+{/* 
     <ItemCount min={1} max={5}/>
+ */}
+
+{/* debo agregar el boton que pase el id */}
+<button onClick={()=>handleNavigation(id)}>ver detalles</button>
   </Card.Body>
 </Card>
 </>

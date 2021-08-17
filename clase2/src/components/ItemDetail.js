@@ -5,7 +5,7 @@ import {Container, Row, Col} from 'react-bootstrap';
 
 // importar todas las imagenes
 import aros from "../imagen/aros.png"
-import clasica from "../components/HF_clasica.png";
+import clasica from "../imagen/HF_clasica.png";
 import negra from "../imagen/HF_negra.png"
 import papa from "../imagen/HF_papa.png"
 import ItemDetailContainer from "./ItemDetailContainer";
