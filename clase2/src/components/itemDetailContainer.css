@@ -1,0 +1,19 @@
+.formatoGeneral{
+    font-family: 'Roboto', sans-serif;
+    background-color: #0D0D0D;
+    color:cornsilk;
+    height: 90vh;
+}
+
+.titulote{
+    padding-top: 5%;
+    font-family: 'Bungee Inline', cursive;
+    font-size: 3rem; 
+    text-align: center;
+}
+
+.titulos{
+   padding-top: 5%;
+    font-family: 'Bungee Inline', cursive;
+}
+

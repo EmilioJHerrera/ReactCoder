@@ -8,6 +8,9 @@ import clasica from "../imagen/HF_clasica.png"
 import fabricar from "../imagen/HF_fabricar.png"
 import negra from "../imagen/HF_negra.png"
 import papa from "../imagen/HF_papa.png"
+//importar la clase css
+import "../components/itemDetailContainer.css"
+
 
 // const ItemDetailContainer = ({id, titulo , precio, descripcion, url, opcion1, opcion2}) => {
 
@@ -28,7 +31,9 @@ import papa from "../imagen/HF_papa.png"
     {
         id:4,titulo:"Hamburguesa Negra",descripcion:"con pan negro de la casa", precio:600 , url:negra, opcion1:"A base de tinta de calamar", opcion2:"A base de colorante artificial"
     },
-    
+    {
+        id:5,titulo:"Fabricar",descripcion:"Fabricar la hamburgues a eleccion", precio:1000 , url:fabricar, opcion1:"Indicar tus ingredientes", opcion2:"SORPRESA!!!"
+    }
     ];
 
     const detalleProducto = listaDetallada.filter(producto=>producto.id==params);
@@ -37,18 +42,18 @@ import papa from "../imagen/HF_papa.png"
 
     return ( 
 
-<>
-<Container>
+<div className="formatoGeneral">
+<Container >
     <Row>
         <Col><img src={detalleProducto[0].url}/></Col> 
         <Col>
-        <h3>{detalleProducto[0].titulo}</h3>
-        <h4> Descripcion detallada</h4>
+        <h3 className="titulote">{detalleProducto[0].titulo}</h3>
+        <h4 className="titulos"> Descripcion detallada</h4>
         <p>{detalleProducto[0].descripcion}</p>
-        <h4> Variantes posibles</h4>
+        <h4 className="titulos"> Variantes posibles</h4>
         <p>{detalleProducto[0].opcion1}</p>
         <p>{detalleProducto[0].opcion2}</p>
-        <h3> Precio </h3>
+        <h3 className="titulos"> Precio </h3>
         <p>{detalleProducto[0].precio}</p>
         <ItemCount min={1} max={5}/>
         
@@ -56,7 +61,7 @@ import papa from "../imagen/HF_papa.png"
     </Row>
 </Container>
 
-</>
+</div>
 
      );
 }

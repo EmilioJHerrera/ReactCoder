@@ -46,7 +46,7 @@ promesa()
 
  return(
      <>
-     <h1 >LISTA DE PRODUCTOS</h1>
+     {/* <h1 >LISTA DE PRODUCTOS</h1> */}
      <div className="estiloList">
 {listaProductos.map(producto=>
     <Item id={producto.id} titulo={producto.titulo} descripcion={producto.descripcion} precio={producto.precio} url={producto.url}/>

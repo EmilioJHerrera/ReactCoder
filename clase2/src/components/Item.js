@@ -4,6 +4,7 @@ import ItemCount from "./ItemCount";
 
 import { useParams, useHistory } from "react-router-dom";
 
+import "../components/itemDetailContainer.css"
 
 function Item({id,titulo, descripcion, precio,url}){
 
@@ -20,7 +21,7 @@ function Item({id,titulo, descripcion, precio,url}){
 return(
 // lo inserto por fragment para luego darle orden un gridSystem
 <>
-<Card style={{ width: '18rem' }}>
+<Card style={{ width: '18rem' }} className="formatoGeneral">
   <Card.Img variant="top" src={url} />
   <Card.Body>
     <Card.Title>{titulo}</Card.Title>
@@ -28,7 +29,7 @@ return(
       {descripcion/* Some quick example text to build on the card title and make up the bulk of
       the card's content. */}
     </Card.Text>
-    <Card.Text>{precio}</Card.Text>
+    <Card.Text>${precio}</Card.Text>
     
     {/* luego se puede modificar los valores de maximos y minimos para cada producto */}
 {/* 
