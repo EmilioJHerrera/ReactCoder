@@ -15,6 +15,7 @@ import {
 import Pag404 from "./Pag404";
 import Item from "./Item";
 import ItemDetailContainer from "./ItemDetailContainer";
+import Cart from "./Cart";
 function NavBar(){
 return(
 
@@ -50,7 +51,9 @@ return(
           <Route path="/ListaProductos">
             <ListaProductos />
           </Route>
-       
+          <Route path="/Cart">
+            <Cart />
+          </Route>
           <Route path="/Combos">
             <Combos />
           </Route>

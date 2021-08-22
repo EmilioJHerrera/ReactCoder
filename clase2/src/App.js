@@ -8,6 +8,7 @@ import ItemList from "./components/ItemList";
 import Combos from "./components/Combos";
 import ItemDetail from "./components/ItemDetail";
 import Home from "./components/Home";
+import { CartContext } from "./context/cartContext";
 
 
 
@@ -20,9 +21,11 @@ function App(){
     
     return(
         <div>
+            {/* <CartContext.Provider value={}> */}
 <NavBar/>
 {/* <ItemListContainer titulo={datos.titulo}/> */}
 {/* <Home titulo={datos.titulo}/> */}
+{/* </CartContext.Provider> */}
 </div>
     );
 }
