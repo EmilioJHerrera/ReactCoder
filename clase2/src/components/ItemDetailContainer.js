@@ -11,6 +11,8 @@ import papa from "../imagen/HF_papa.png"
 //importar la clase css
 import "../components/itemDetailContainer.css"
 
+//importar el proveedor de contextos
+import MyCartProvider, { CartContext } from "../context/cartContext";
 
 // const ItemDetailContainer = ({id, titulo , precio, descripcion, url, opcion1, opcion2}) => {
 
@@ -43,24 +45,29 @@ import "../components/itemDetailContainer.css"
     return ( 
 
 <div className="formatoGeneral">
-<Container >
-    <Row>
-        <Col><img src={detalleProducto[0].url}/></Col> 
-        <Col>
-        <h3 className="titulote">{detalleProducto[0].titulo}</h3>
-        <h4 className="titulos"> Descripcion detallada</h4>
-        <p>{detalleProducto[0].descripcion}</p>
-        <h4 className="titulos"> Variantes posibles</h4>
-        <p>{detalleProducto[0].opcion1}</p>
-        <p>{detalleProducto[0].opcion2}</p>
-        <h3 className="titulos"> Precio </h3>
-        <p>{detalleProducto[0].precio}</p>
-        <ItemCount min={1} max={5}/>
-        
-        </Col>
-    </Row>
-</Container>
 
+        <Container >
+            <Row>
+            <Col><img src={detalleProducto[0].url}/></Col> 
+            <Col>
+            <h3 className="titulote">{detalleProducto[0].titulo}</h3>
+            <h4 className="titulos"> Descripcion detallada</h4>
+            <p>{detalleProducto[0].descripcion}</p>
+            <h4 className="titulos"> Variantes posibles</h4>
+            <p>{detalleProducto[0].opcion1}</p>
+            <p>{detalleProducto[0].opcion2}</p>
+            <h3 className="titulos"> Precio </h3>
+            <p>{detalleProducto[0].precio}</p>
+            <MyCartProvider>
+     <CartContext.Provider>
+            
+            <ItemCount min={1} max={5}/>
+            </CartContext.Provider>
+</MyCartProvider>    
+            </Col>
+            </Row>
+        </Container>
+    
 </div>
 
      );

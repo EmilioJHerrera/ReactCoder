@@ -8,25 +8,28 @@ import ItemList from "./components/ItemList";
 import Combos from "./components/Combos";
 import ItemDetail from "./components/ItemDetail";
 import Home from "./components/Home";
-import { CartContext } from "./context/cartContext";
-
+import MyCartProvider, { CartContext } from "./context/cartContext";
+import { useState } from "react";
 
 
 
 function App(){
 
+    
     const datos = {
         titulo : "Te odio REACT!!!! Incluye aquí el rendering de algún texto o título provisional que luego reemplazaremos por nuestro catálogo"
     }
     
     return(
         <div>
-            {/* <CartContext.Provider value={}> */}
-<NavBar/>
+            <MyCartProvider>
+                <CartContext.Provider>
+                    <NavBar/>
 {/* <ItemListContainer titulo={datos.titulo}/> */}
 {/* <Home titulo={datos.titulo}/> */}
-{/* </CartContext.Provider> */}
-</div>
+                </CartContext.Provider>
+            </MyCartProvider>
+        </div>
     );
 }
 

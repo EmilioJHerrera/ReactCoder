@@ -2,12 +2,16 @@ import React, {useState, useEffect} from "react";
 import {Container} from 'react-bootstrap';
 import "../components/ItemCount.css"
 import { useHistory } from "react-router-dom";
-
+import  MyCartProvider, { CartContext } from "../context/cartContext";
+import {useContext} from "react";
 //funcion recibe props de minimos y maximos
 //desestructurar en lugar de usar props en los argumentos de la funcion 
 
 function ItemCount({min,max}){
   
+// //destructurar contexto
+ const {carritoCompra, addItem, removeItem, clear} = useContext(CartContext);
+
 //hook de estado inicial
 const [cantidad, setCantidad] = useState(0);
 const [mensaje, setMensaje] = useState("");
@@ -30,6 +34,8 @@ const validarMinimo = (min) =>{
 
 const agregarCarrito =() =>{
     //console.log(evt)
+    // addItem(cantidad);
+    // console.log("");
      setMensaje(`enviado ${cantidad} al carrito...`);
      console.log(setMensaje);
      setenviarCarrito(enviarCarrito + cantidad);
