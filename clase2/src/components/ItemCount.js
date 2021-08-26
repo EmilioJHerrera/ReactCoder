@@ -2,15 +2,17 @@ import React, {useState, useEffect} from "react";
 import {Container} from 'react-bootstrap';
 import "../components/ItemCount.css"
 import { useHistory } from "react-router-dom";
-import  MyCartProvider, { CartContext } from "../context/cartContext";
+import MyCartProvider, { CartContext } from "../context/cartContext";
 import {useContext} from "react";
 //funcion recibe props de minimos y maximos
 //desestructurar en lugar de usar props en los argumentos de la funcion 
 
-function ItemCount({min,max}){
+function ItemCount({min,max,url,titulo,descripcion,precio}){
   
 // //destructurar contexto
  const {carritoCompra, addItem, removeItem, clear} = useContext(CartContext);
+
+//console.log(addItem);
 
 //hook de estado inicial
 const [cantidad, setCantidad] = useState(0);
@@ -25,6 +27,8 @@ const [finalizarCompra, setfinalizarCompra] = useState(false); //bandera para mo
 // const max = 3;
 
 //funciones que modifican el hook y entregar el set
+
+
 const validarMaximo = (max) =>{
     (cantidad<= (max-1))? setCantidad(cantidad +1): alert("maximo alcanzado")
 }
@@ -33,21 +37,34 @@ const validarMinimo = (min) =>{
 }
 
 const agregarCarrito =() =>{
+    
+    
     //console.log(evt)
-    // addItem(cantidad);
-    // console.log("");
+    
      setMensaje(`enviado ${cantidad} al carrito...`);
      console.log(setMensaje);
-     setenviarCarrito(enviarCarrito + cantidad);
-     console.log("enviarcarrito:", enviarCarrito);
+    //  setenviarCarrito(enviarCarrito + cantidad);
+     console.log("cantidad:", cantidad);
+    //  console.log("enviarcarrito:", enviarCarrito);
+    //  console.log("descripcion:",descripcion);
+    
+     const newItem = {url,titulo,descripcion,precio, cantidad};
+     console.log(newItem);
+     addItem(newItem);
+     console.log("carritoCompra",carritoCompra);
      setfinalizarCompra(true);
      
 }
+
+
+
 //manejar la navegacion para ir a mi carrito
 const history = useHistory();
   const handleNavigation = () => {
     history.push(`/Cart`);
   };
+
+
 
 // espacio para retornar el resultado
 return(

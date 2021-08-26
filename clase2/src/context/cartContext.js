@@ -3,7 +3,7 @@ import { useState } from "react";
 
  export const CartContext = createContext([]);
 
- export default function MyCartProvider({defaultValue = [], children}) {
+  function MyCartProvider({defaultValue = [], children}) {
 
     const [carritoCompra, setcarritoCompra] = useState([]);
     
@@ -30,3 +30,5 @@ return(
 );
 
  }
+
+ export default MyCartProvider;

@@ -23,11 +23,11 @@ function App(){
     return(
         <div>
             <MyCartProvider>
-                <CartContext.Provider>
+                {/* <CartContext.Provider> */}
                     <NavBar/>
 {/* <ItemListContainer titulo={datos.titulo}/> */}
 {/* <Home titulo={datos.titulo}/> */}
-                </CartContext.Provider>
+                {/* </CartContext.Provider> */}
             </MyCartProvider>
         </div>
     );

@@ -11,8 +11,6 @@ import papa from "../imagen/HF_papa.png"
 //importar la clase css
 import "../components/itemDetailContainer.css"
 
-//importar el proveedor de contextos
-import MyCartProvider, { CartContext } from "../context/cartContext";
 
 // const ItemDetailContainer = ({id, titulo , precio, descripcion, url, opcion1, opcion2}) => {
 
@@ -58,12 +56,10 @@ import MyCartProvider, { CartContext } from "../context/cartContext";
             <p>{detalleProducto[0].opcion2}</p>
             <h3 className="titulos"> Precio </h3>
             <p>{detalleProducto[0].precio}</p>
-            <MyCartProvider>
-     <CartContext.Provider>
+    
             
-            <ItemCount min={1} max={5}/>
-            </CartContext.Provider>
-</MyCartProvider>    
+            <ItemCount min={1} max={5} url={detalleProducto[0].url} titulo={detalleProducto[0].titulo} descripcion={detalleProducto[0].descripcion} precio={detalleProducto[0].precio}     />
+
             </Col>
             </Row>
         </Container>

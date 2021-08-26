@@ -7,7 +7,7 @@ import  MyCartProvider, { CartContext } from "../context/cartContext";
 import {useContext} from "react";
 const ListaProductos = () => {
 
-    console.log(useContext(CartContext));
+    // console.log(useContext(CartContext));
 
     return ( 
 <div className="formatoGeneral">
