@@ -58,7 +58,7 @@ import "../components/itemDetailContainer.css"
             <p>{detalleProducto[0].precio}</p>
     
             
-            <ItemCount min={1} max={5} url={detalleProducto[0].url} titulo={detalleProducto[0].titulo} descripcion={detalleProducto[0].descripcion} precio={detalleProducto[0].precio}     />
+            <ItemCount min={1} max={5} id={detalleProducto[0].id} url={detalleProducto[0].url} titulo={detalleProducto[0].titulo} descripcion={detalleProducto[0].descripcion} precio={detalleProducto[0].precio}     />
 
             </Col>
             </Row>
