@@ -6,3 +6,11 @@
 	align-items: center;
 	align-content: stretch;
     };
+
+	.loader{
+		background-color:rgb(141, 65, 65);
+		padding: 2rem 2rem;
+		display: flex;
+		justify-content: center;
+	align-items: center;
+	}

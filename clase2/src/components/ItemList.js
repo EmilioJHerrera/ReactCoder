@@ -9,6 +9,7 @@ import negra from "../imagen/HF_negra.png"
 import papa from "../imagen/HF_papa.png"
 import { getFirestore } from "../firebase";
 import { onSnapshot, QuerySnapshot } from "firebase/firestore";
+import Spinner from 'react-bootstrap/spinner'
 
 
 
@@ -48,7 +49,12 @@ function ItemList (){
 //     ()=>{console.log("finalizo la promesa");}
 // );
 
+// creacion de los state necesarios
 const [items, setItems] = useState([]);
+const [loading, setLoading] = useState (false);
+
+
+//sector de pruebas y casting de variables involucradas
 console.log("Items", items);
 let clone = {...items}
 console.log("clone", clone);
@@ -65,6 +71,8 @@ console.log ("lP",listaProductos)
 
 useEffect(() => {
     
+    setLoading(true);
+
     const db = getFirestore();
     const itemCollection = db.collection("Items");
 
@@ -74,17 +82,16 @@ useEffect(() => {
         }
         setItems(querySnapshot.docs.map(documento => documento.data()))
     }).catch(error => console.log (error))
+    .finally(()=>setLoading(false));
 }, [])
-
-
-
-
-
 
  return(
      <>
      {/* <h1 >LISTA DE PRODUCTOS</h1> */}
-     <div className="estiloList">
+     {/* {loading && <h1>Loading...</h1>} */}
+     {loading && <div className="loader" ><Spinner animation="border" variant="light" style={{marginLeft:"50%"}}/></div>}
+
+      <div className="estiloList">
 {listaProductos.map(producto=>
     <Item id={producto.id} titulo={producto.titulo} descripcion={producto.descripcion} precio={producto.precio} url={producto.url}/>
     )}
