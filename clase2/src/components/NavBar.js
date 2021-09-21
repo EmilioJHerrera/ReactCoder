@@ -31,12 +31,12 @@ return(
     <Nav className="me-auto letraGeneral">
       <Nav.Link> <NavLink exact to="/ListaProductos">Productos</NavLink></Nav.Link>
       {/* <Nav.Link href="#pricing">Precios</Nav.Link> */}
-      <NavDropdown title="Precios" id="collasible-nav-dropdown">
+      {/* <NavDropdown title="Precios" id="collasible-nav-dropdown">
         <NavDropdown.Item ><NavLink exact to="/Combos">Combos</NavLink></NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item >Fabricar</NavDropdown.Item>
         
-      </NavDropdown>
+      </NavDropdown> */}
     </Nav>
     
   </Navbar.Collapse>
@@ -54,9 +54,9 @@ return(
           <Route path="/Cart">
             <Cart />
           </Route>
-          <Route path="/Combos">
+          {/* <Route path="/Combos">
             <Combos />
-          </Route>
+          </Route> */}
           <Route exact path="/">
             <Home />
           </Route>

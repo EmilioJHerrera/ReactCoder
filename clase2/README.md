@@ -1,3 +1,18 @@
+# INFORMACIÓN DE INTERES
+
+Este proyecto muestra una app de comercio electrónico de comida rápida.
+
+## Secciones disponibles en el circuito de compra
+
+Hero: Parte introductoria y sección con un navbar y el uso de columnas y filas de react-bootstrap. Dentro del navBar se remite a la parte de "productos"
+
+Productos: Consta del listado de productos ofrecidos y se emplea comandos de firebase para la carga de los productos ofrecidos. Dentro de este apartado se ofrece el detalle de cada opción.
+
+Item: Opción que se despliega luego de oprimir el detalle de la sección anteriormente mencionada. Se distingue el uso del hook useHistory para cargar la info de un item definido. Aqui se pueden definir la cantidad de este producto a agregar en el carrito de compra.
+
+Cart: Muestra los productos cargados. En la parte izquierda muestra el detalle de la compra y en la parte derecha el total y la cantidad de ITEMS a cargar en la orden. En este apartado se finaliza el recorrido de la compra cuando se envia la orden a firebase para su procesado.
+
+<!-- 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -67,4 +82,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

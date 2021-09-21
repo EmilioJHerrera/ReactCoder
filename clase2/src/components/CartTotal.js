@@ -20,7 +20,7 @@ numeroItems();
 const handleEscribirOrden =() =>{
 const orden = {
     comprador:{ nombre : "Emilio", telefono : "09001728888", correo: "micorreo@correo.com"},
-    items: "ingresar datos de los items de la compra",
+    items: carritoCompra,
     total : totalCompra,
     cantidad : longitudCompra
 }
@@ -31,6 +31,7 @@ ordenes
 .add(orden)
 .then((response) => {
 console.log(response);
+alert("En la consola se puede apreciar el ID del objeto creado en firebase =D");
 })
 .catch((error)=> console.log(error));
 
@@ -38,7 +39,7 @@ console.log(response);
     return (
         <div>
             <h1>TOTAL:{totalCompra}</h1>
-            <h2>Cantidad:{longitudCompra}</h2>
+            <h2>Número de items en el carrito: {longitudCompra}</h2>
             <button onClick={()=> handleEscribirOrden()}>enviar orden a firebase</button>
         </div>
     )

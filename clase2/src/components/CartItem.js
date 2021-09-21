@@ -34,7 +34,7 @@ const {carritoCompra, addItem, removeItem, clear, longitudCompra, numeroItems} =
         <button onClick={()=>removeItem(id)}>Remover item</button> 
         <button onClick={()=>clear()}>Vaciar carrito</button>   
         </div> 
-        <CartTotal/> 
+         
         
         
         

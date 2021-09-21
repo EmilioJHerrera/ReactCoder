@@ -10,7 +10,9 @@ import papa from "../imagen/HF_papa.png"
 import ItemDetailContainer from "./ItemDetailContainer";
 import CartItem from './CartItem';
 import CartVacio from "./CartVacio";
+import CartTotal from './CartTotal';
 
+import {Container, Row, Col } from "react-bootstrap";
 
  const Cart = () => {
   
@@ -24,12 +26,30 @@ numeroItems();
    
     return (
         <>
-            <h1>mi carrito</h1>
+
+<Container>
+    <Row>
+            <h1>Mi carrito</h1>
+<Col>
             {(longitudCompra==0) && ( <CartVacio/>)}
 {!(longitudCompra==0) &&    carritoCompra.map(producto =>
  <CartItem id= {producto.id} url={producto.url} titulo={producto.titulo} descripcion={producto.descripcion} precio={producto.precio} cantidad={producto.cantidad}/>
 
         )}
+
+
+</Col>
+<Col>
+        <CartTotal/>
+
+</Col>
+    </Row>
+</Container>
+
+
+
+
+
         </>
     );
 }
